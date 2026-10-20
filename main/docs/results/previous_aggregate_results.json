@@ -1,0 +1,390 @@
+{
+  "original": {
+    "participants": 45,
+    "samples": 45447,
+    "events": 2845,
+    "fused_gradient_boosting_pooled": {
+      "pr_auc_average_precision": 0.4009335865971555,
+      "roc_auc": 0.883273312663275,
+      "brier_score": 0.04602947557626029
+    },
+    "fused_gradient_boosting_sample_weighted_folds": {
+      "pr_auc_average_precision": {
+        "mean": 0.4268399622824545,
+        "std": 0.12977995128531677
+      },
+      "roc_auc": {
+        "mean": 0.8807239350270826,
+        "std": 0.048398674282459954
+      },
+      "brier_score": {
+        "mean": 0.0460294755762603,
+        "std": 0.007497493425965719
+      }
+    },
+    "hba1c_strata": {
+      "Healthy-range HbA1c": {
+        "participants": 15,
+        "samples": 15081,
+        "events": 106,
+        "event_rate": 0.007028711623897619,
+        "pr_auc": 0.03806037226870551,
+        "roc_auc": 0.903364727375815,
+        "brier_score": 0.007004044407427569
+      },
+      "Diabetes-range HbA1c": {
+        "participants": 14,
+        "samples": 14457,
+        "events": 2300,
+        "event_rate": 0.15909248115099953,
+        "pr_auc": 0.45292552671654707,
+        "roc_auc": 0.7970693034251157,
+        "brier_score": 0.10983949440954487
+      },
+      "Prediabetes-range HbA1c": {
+        "participants": 16,
+        "samples": 15909,
+        "events": 439,
+        "event_rate": 0.02759444339681941,
+        "pr_auc": 0.1554391476339501,
+        "roc_auc": 0.8277497927504627,
+        "brier_score": 0.025037652406002642
+      }
+    }
+  },
+  "initial_readme": {
+    "participants": 45,
+    "samples": 45447,
+    "events": 2845,
+    "fused_gradient_boosting_pooled": {
+      "pr_auc_average_precision": 0.40068357097177415,
+      "roc_auc": 0.8823765421378024,
+      "brier_score": 0.04606229099067174
+    },
+    "fused_gradient_boosting_sample_weighted_folds": {
+      "pr_auc_average_precision": {
+        "mean": 0.42522264025707135,
+        "std": 0.13150445265581898
+      },
+      "roc_auc": {
+        "mean": 0.8793278344833785,
+        "std": 0.04989691439769414
+      },
+      "brier_score": {
+        "mean": 0.04606229099067174,
+        "std": 0.007525428652375143
+      }
+    },
+    "hba1c_strata": {
+      "Healthy-range HbA1c": {
+        "participants": 15,
+        "samples": 15081,
+        "events": 106,
+        "event_rate": 0.007028711623897619,
+        "pr_auc": 0.03595124863969526,
+        "roc_auc": 0.8986663306769144,
+        "brier_score": 0.007004577912224879
+      },
+      "Diabetes-range HbA1c": {
+        "participants": 14,
+        "samples": 14457,
+        "events": 2300,
+        "event_rate": 0.15909248115099953,
+        "pr_auc": 0.4528384018528971,
+        "roc_auc": 0.7948347346849731,
+        "brier_score": 0.10987407864994597
+      },
+      "Prediabetes-range HbA1c": {
+        "participants": 16,
+        "samples": 15909,
+        "events": 439,
+        "event_rate": 0.02759444339681941,
+        "pr_auc": 0.1540822668875059,
+        "roc_auc": 0.8284841113596306,
+        "brier_score": 0.025099462198537065
+      }
+    }
+  },
+  "previous_nested_evaluation": {
+    "design": "Phase 2 nested grouped CV",
+    "data": {
+      "participants": 45,
+      "samples": 45447,
+      "events": 2845,
+      "target": "CGM >= 180 mg/dL at +120 minutes",
+      "outer_folds": 5,
+      "inner_folds": 3,
+      "group": "participant_id",
+      "forward_fill_ablation_minutes": [
+        15,
+        30,
+        60
+      ]
+    },
+    "pooled": {
+      "hgb_fused": {
+        "pr_auc": 0.38849830362440413,
+        "roc_auc": 0.8776458303029414,
+        "brier": 0.04671708283702248
+      },
+      "hgb_sensor_only": {
+        "pr_auc": 0.41285741018558375,
+        "roc_auc": 0.8778619517438102,
+        "brier": 0.04569857768501242
+      },
+      "logistic_fused": {
+        "pr_auc": 0.313948213299834,
+        "roc_auc": 0.7201310961002598,
+        "brier": 0.055259499785921005
+      },
+      "logistic_reduced_ehr": {
+        "pr_auc": 0.4236702776710359,
+        "roc_auc": 0.8838792521849144,
+        "brier": 0.045611762670849015
+      },
+      "hgb_ffill_15m": {
+        "pr_auc": 0.4101667465251554,
+        "roc_auc": 0.8771547768452995,
+        "brier": 0.04579297875714748
+      },
+      "hgb_ffill_60m": {
+        "pr_auc": 0.41285741018558375,
+        "roc_auc": 0.8778619517438102,
+        "brier": 0.04569857768501242
+      },
+      "calibrated_hgb_fused": {
+        "pr_auc": 0.3748354408352627,
+        "roc_auc": 0.875666196022547,
+        "brier": 0.04681841297202959
+      }
+    },
+    "participant_macro": {
+      "hgb_fused": {
+        "pr_auc": 0.25171992541273996,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.749134526418596,
+        "roc_auc_participants": 29,
+        "brier": 0.04666262424810634,
+        "brier_participants": 45
+      },
+      "hgb_sensor_only": {
+        "pr_auc": 0.2246999871396804,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.7122187439945236,
+        "roc_auc_participants": 29,
+        "brier": 0.045640426160006714,
+        "brier_participants": 45
+      },
+      "logistic_fused": {
+        "pr_auc": 0.18791621495604763,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.699140261198642,
+        "roc_auc_participants": 29,
+        "brier": 0.05515639936224806,
+        "brier_participants": 45
+      },
+      "logistic_reduced_ehr": {
+        "pr_auc": 0.18970474814304883,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.702803354560962,
+        "roc_auc_participants": 29,
+        "brier": 0.045353567512702565,
+        "brier_participants": 45
+      },
+      "hgb_ffill_15m": {
+        "pr_auc": 0.22167630173244599,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.7103199943893772,
+        "roc_auc_participants": 29,
+        "brier": 0.04574626670670054,
+        "brier_participants": 45
+      },
+      "hgb_ffill_60m": {
+        "pr_auc": 0.2246999871396804,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.7122187439945236,
+        "roc_auc_participants": 29,
+        "brier": 0.045640426160006714,
+        "brier_participants": 45
+      },
+      "calibrated_hgb_fused": {
+        "pr_auc": 0.25171992541273996,
+        "pr_auc_participants": 29,
+        "roc_auc": 0.749134526418596,
+        "roc_auc_participants": 29,
+        "brier": 0.04674608586905003,
+        "brier_participants": 45
+      }
+    },
+    "outer_fold_macro": {
+      "hgb_fused": {
+        "pr_auc": 0.4156567488313275,
+        "roc_auc": 0.8744358255098448,
+        "brier": 0.04664519635952799
+      },
+      "hgb_sensor_only": {
+        "pr_auc": 0.4083944961745038,
+        "roc_auc": 0.8747758275385735,
+        "brier": 0.04566849057369875
+      },
+      "logistic_fused": {
+        "pr_auc": 0.2718950676571455,
+        "roc_auc": 0.705771688559409,
+        "brier": 0.05515219307414103
+      },
+      "logistic_reduced_ehr": {
+        "pr_auc": 0.3876549758259934,
+        "roc_auc": 0.8815101972884154,
+        "brier": 0.04558506986374675
+      },
+      "hgb_ffill_15m": {
+        "pr_auc": 0.40296474243521774,
+        "roc_auc": 0.8738045091080424,
+        "brier": 0.04576202456532376
+      },
+      "hgb_ffill_60m": {
+        "pr_auc": 0.4083944961745038,
+        "roc_auc": 0.8747758275385735,
+        "brier": 0.04566849057369875
+      },
+      "calibrated_hgb_fused": {
+        "pr_auc": 0.4156567488313275,
+        "roc_auc": 0.8744358255098448,
+        "brier": 0.046745839066245125
+      }
+    },
+    "operating_point": {
+      "target_precision": 0.8,
+      "folds": [
+        {
+          "fold": 1,
+          "threshold": null,
+          "training_validation_precision": null,
+          "training_validation_recall": null,
+          "heldout_precision": null,
+          "heldout_recall": 0.0,
+          "heldout_predicted_positive_samples": 0
+        },
+        {
+          "fold": 2,
+          "threshold": 0.9333652018582985,
+          "training_validation_precision": 1.0,
+          "training_validation_recall": 0.000847457627118644,
+          "heldout_precision": null,
+          "heldout_recall": 0.0,
+          "heldout_predicted_positive_samples": 0
+        },
+        {
+          "fold": 3,
+          "threshold": null,
+          "training_validation_precision": null,
+          "training_validation_recall": null,
+          "heldout_precision": null,
+          "heldout_recall": 0.0,
+          "heldout_predicted_positive_samples": 0
+        },
+        {
+          "fold": 4,
+          "threshold": 0.9017395783676092,
+          "training_validation_precision": 1.0,
+          "training_validation_recall": 0.00041841004184100416,
+          "heldout_precision": null,
+          "heldout_recall": 0.0,
+          "heldout_predicted_positive_samples": 0
+        },
+        {
+          "fold": 5,
+          "threshold": 0.776093933420323,
+          "training_validation_precision": 0.8103448275862069,
+          "training_validation_recall": 0.023453093812375248,
+          "heldout_precision": 1.0,
+          "heldout_recall": 0.008323424494649227,
+          "heldout_predicted_positive_samples": 7
+        }
+      ],
+      "pooled_outer_oof": {
+        "precision": 1.0,
+        "recall": 0.002460456942003515,
+        "predicted_positive_samples": 7,
+        "threshold_policy": "Outer-fold-specific threshold selected on inner OOF scores from training participants."
+      }
+    },
+    "regression": {
+      "hgb_pooled": {
+        "mae_mg_dl": 20.464224492498392,
+        "rmse_mg_dl": 29.43491982415392
+      },
+      "persistence_pooled": {
+        "mae_mg_dl": 24.10518919473966,
+        "rmse_mg_dl": 36.94254277907139
+      },
+      "hgb_participant_macro": {
+        "mae_mg_dl": 20.592099065221532,
+        "rmse_mg_dl": 27.05151701099841
+      },
+      "persistence_participant_macro": {
+        "mae_mg_dl": 23.97709856914643,
+        "rmse_mg_dl": 33.712288961280244
+      }
+    },
+    "strata": {
+      "definition": "Baseline HbA1c categories; analytic groups, not independent chart diagnoses.",
+      "results": {
+        "Healthy-range HbA1c": {
+          "participants": 15,
+          "participants_with_event": 2,
+          "samples": 15081,
+          "events": 106,
+          "event_prevalence": 0.007028711623897619,
+          "constant_prevalence_pr_baseline": 0.007028711623897619,
+          "hgb_fused_pooled": {
+            "pr_auc": 0.028497793853637328,
+            "roc_auc": 0.877569534129209,
+            "brier": 0.007011498181959817
+          },
+          "calibrated_hgb_fused_pooled": {
+            "pr_auc": 0.026793261172375734,
+            "roc_auc": 0.8739074558225973,
+            "brier": 0.006952113045226178
+          }
+        },
+        "Diabetes-range HbA1c": {
+          "participants": 14,
+          "participants_with_event": 14,
+          "samples": 14457,
+          "events": 2300,
+          "event_prevalence": 0.15909248115099953,
+          "constant_prevalence_pr_baseline": 0.15909248115099953,
+          "hgb_fused_pooled": {
+            "pr_auc": 0.43660261923898913,
+            "roc_auc": 0.7814841511957684,
+            "brier": 0.11206885410696697
+          },
+          "calibrated_hgb_fused_pooled": {
+            "pr_auc": 0.4209141747559541,
+            "roc_auc": 0.777433487952906,
+            "brier": 0.11240082053486607
+          }
+        },
+        "Prediabetes-range HbA1c": {
+          "participants": 16,
+          "participants_with_event": 13,
+          "samples": 15909,
+          "events": 439,
+          "event_prevalence": 0.02759444339681941,
+          "constant_prevalence_pr_baseline": 0.02759444339681941,
+          "hgb_fused_pooled": {
+            "pr_auc": 0.16601528799591292,
+            "roc_auc": 0.8213913916714397,
+            "brier": 0.024968975786510972
+          },
+          "calibrated_hgb_fused_pooled": {
+            "pr_auc": 0.16113886408039774,
+            "roc_auc": 0.8206382255022213,
+            "brier": 0.02501307027671221
+          }
+        }
+      }
+    }
+  }
+}

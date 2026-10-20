@@ -1,0 +1,22 @@
+flowchart LR
+    EHR["Static baseline clinical context<br/>bio.csv: age, gender, BMI, HbA1c, fasting labs, lipids"]
+    CGM["Dynamic sensor stream<br/>Libre CGM glucose, 15-minute sampling"]
+    HR["Wearable stream<br/>heart rate"]
+    ACT["Wearable stream<br/>activity level and activity calories"]
+    MEAL["Meal log stream<br/>meal events, carbs, calories, macros"]
+    JOIN["Participant + time alignment<br/>baseline context joined to each forecast timestamp"]
+    FEATURES["Feature fusion<br/>41 dynamic rolling/time-series features + 12 baseline clinical features (53 total)"]
+    MODEL["HistGradientBoostingClassifier<br/>participant-grouped cross-validation"]
+    FORECAST["2-hour forecast<br/>P(Libre glucose at t+120 min >= 180 mg/dL)"]
+    UI["Concept doctor dashboard<br/>risk-sorted worklist, patient trace, baseline profile, research warning"]
+    EVAL["Evaluation<br/>pooled out-of-fold metrics, HbA1c strata, calibration, participant bootstrap"]
+    FUTURE["Potential future streams<br/>sleep and HRV (not present in CGMacros model inputs)"]
+
+    EHR --> JOIN
+    CGM --> JOIN
+    HR --> JOIN
+    ACT --> JOIN
+    MEAL --> JOIN
+    JOIN --> FEATURES --> MODEL --> FORECAST --> UI
+    FORECAST --> EVAL
+    FUTURE -. "future integration only" .-> FEATURES

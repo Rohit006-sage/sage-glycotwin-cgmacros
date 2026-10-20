@@ -1,0 +1,25 @@
+{
+  "split": "5-fold participant grouped; each target participant uses only its first 72 hours; population MAP prior fit using outer-training participants only",
+  "seed": 42,
+  "participants": 45,
+  "outer_test_fits": 45,
+  "stable_test_fits": 11,
+  "fallback_test_fits": 34,
+  "fallback_reasons_test_only": {
+    "parameter at bound": 34,
+    "fit stable": 11
+  },
+  "test_parameter_ranges": {
+    "insulin_sensitivity": [
+      0.2628363589956994,
+      2.5
+    ],
+    "glucose_per_gram": [
+      0.11432154781540672,
+      1.797239013350762
+    ]
+  },
+  "median_condition_number_test": 1.571625663063504,
+  "median_early_fit_rmse_mg_dl_test": 29.55817455773042,
+  "identifiability": "Only insulin sensitivity and effective carbohydrate gain are fitted; remaining time constants are fixed. Fits at bounds or ill-conditioned fits fall back to training-derived population parameters adjusted by the person's HOMA-IR prior. No participant-level estimates are published."
+}
