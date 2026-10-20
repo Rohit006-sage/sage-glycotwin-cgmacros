@@ -1,0 +1,56 @@
+{
+  "dataset": "CGMacros v1.0.0; 45 participants; audit is descriptive",
+  "field_availability": {
+    "meal_timestamp": "Timestamp on participant minute-grid; meal events marked by Meal Type or positive Carbs",
+    "meal_macros": "Carbs, Protein, Fat, Fiber, Calories; counts of nonmissing meal-event values are reported below",
+    "activity": "participant files vary: METs (documented as MET x10), Intensity, Calories (Activity), or Steps",
+    "heart_rate": "HR in bpm, sampled on minute grid where available",
+    "cgm": "Libre GL and Dexcom GL in mg/dL; timestamps are randomly shifted study times",
+    "bio": "Fasting GLU - PDL (Lab) mg/dL and Insulin mcU/mL at study start"
+  },
+  "participants": 45,
+  "meal_events_total": 1706,
+  "meal_events_per_participant": {
+    "median": 38.0,
+    "min": 17,
+    "max": 64
+  },
+  "pairs_of_meals_within_120_minutes_total": 250,
+  "participants_with_any_pair_within_120_minutes": 35,
+  "positive_carbohydrate_meals_total": 1640,
+  "complete_carb_protein_fat_fiber_meals_total": 1705,
+  "nonmissing_macro_cells_by_field": {
+    "Carbs": 1706,
+    "Protein": 1706,
+    "Fat": 1706,
+    "Fiber": 1705,
+    "Calories": 1706
+  },
+  "cgm_interval_minutes": {
+    "all_libre_readings_median": 1.0,
+    "all_libre_readings_p10": 1.0,
+    "all_libre_readings_p90": 1.0,
+    "by_sensor": {
+      "Libre GL": {
+        "median": 1.0,
+        "p10": 1.0,
+        "p90": 1.0,
+        "n_intervals": 687315
+      },
+      "Dexcom GL": {
+        "median": 1.0,
+        "p10": 1.0,
+        "p90": 1.0,
+        "n_intervals": 629780
+      }
+    }
+  },
+  "participants_with_fasting_glucose_and_insulin": 45,
+  "activity_field_participants": {
+    "METs": 34,
+    "Intensity": 11,
+    "Calories (Activity)": 44,
+    "Steps": 1
+  },
+  "privacy": "Per-participant meal counts are saved only under git-ignored data/processed/twin_step1/. No per-sample outputs are written here."
+}

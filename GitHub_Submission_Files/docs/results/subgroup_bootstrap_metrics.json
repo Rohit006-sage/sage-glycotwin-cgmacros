@@ -1,0 +1,128 @@
+{
+  "seed": 20261005,
+  "requested_cluster_bootstraps": 2000,
+  "source": "120-minute seed-42 held-out OOF predictions; resampled participants as clusters.",
+  "limitations": "Intervals condition on fixed out-of-fold predictions and do not include model-refit uncertainty. Healthy-range events come from very few participants; interpret subgroup estimates cautiously.",
+  "strata": {
+    "healthy_range_lt_5_7": {
+      "participants": 15,
+      "samples": 15081,
+      "events": 106,
+      "event_prevalence_constant_pr_auc_baseline": 0.007028711623897619,
+      "participants_with_at_least_one_event": 2,
+      "metrics_seed_42": {
+        "pooled_pr_auc": 0.0435077262060088,
+        "pooled_roc_auc": 0.8928673575455949,
+        "participant_macro_pr_auc": 0.20296929944896547,
+        "participant_macro_pr_auc_n": 2,
+        "participant_macro_roc_auc": 0.6418550463745096,
+        "participant_macro_roc_auc_n": 2,
+        "pooled_brier": 0.006978293150832316
+      },
+      "participant_cluster_bootstrap_95_ci": {
+        "pooled_pr_auc": {
+          "lower_95": 0.00016720340532144908,
+          "upper_95": 0.2635572261430215,
+          "valid_resamples": 1781,
+          "requested_resamples": 2000
+        },
+        "pooled_roc_auc": {
+          "lower_95": 0.34269616526853475,
+          "upper_95": 0.9440000077552532,
+          "valid_resamples": 1781,
+          "requested_resamples": 2000
+        }
+      }
+    },
+    "prediabetes_range_5_7_to_lt_6_5": {
+      "participants": 16,
+      "samples": 15909,
+      "events": 439,
+      "event_prevalence_constant_pr_auc_baseline": 0.02759444339681941,
+      "participants_with_at_least_one_event": 13,
+      "metrics_seed_42": {
+        "pooled_pr_auc": 0.1636371239059868,
+        "pooled_roc_auc": 0.8320912840342025,
+        "participant_macro_pr_auc": 0.10032649075274716,
+        "participant_macro_pr_auc_n": 13,
+        "participant_macro_roc_auc": 0.7127152248509165,
+        "participant_macro_roc_auc_n": 13,
+        "pooled_brier": 0.025077646426344267
+      },
+      "participant_cluster_bootstrap_95_ci": {
+        "pooled_pr_auc": {
+          "lower_95": 0.03737242352946292,
+          "upper_95": 0.27364774106288975,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        },
+        "pooled_roc_auc": {
+          "lower_95": 0.7394939075689867,
+          "upper_95": 0.8905913073864137,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        }
+      }
+    },
+    "diabetes_range_ge_6_5": {
+      "participants": 14,
+      "samples": 14457,
+      "events": 2300,
+      "event_prevalence_constant_pr_auc_baseline": 0.15909248115099953,
+      "participants_with_at_least_one_event": 14,
+      "metrics_seed_42": {
+        "pooled_pr_auc": 0.43040468364351026,
+        "pooled_roc_auc": 0.8026562796170396,
+        "participant_macro_pr_auc": 0.38229398904491696,
+        "participant_macro_pr_auc_n": 14,
+        "participant_macro_roc_auc": 0.801510841367251,
+        "participant_macro_roc_auc_n": 14,
+        "pooled_brier": 0.11062041088731554
+      },
+      "participant_cluster_bootstrap_95_ci": {
+        "pooled_pr_auc": {
+          "lower_95": 0.2661673055175417,
+          "upper_95": 0.5856343283864514,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        },
+        "pooled_roc_auc": {
+          "lower_95": 0.7382517616918871,
+          "upper_95": 0.8510068934483848,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        }
+      }
+    },
+    "all_participants": {
+      "participants": 45,
+      "samples": 45447,
+      "events": 2845,
+      "event_prevalence_constant_pr_auc_baseline": 0.0626003916650164,
+      "participants_with_at_least_one_event": 29,
+      "metrics_seed_42": {
+        "pooled_pr_auc": 0.38202079603955674,
+        "pooled_roc_auc": 0.8875127854010502,
+        "participant_macro_pr_auc": 0.2435275457004304,
+        "participant_macro_pr_auc_n": 29,
+        "participant_macro_roc_auc": 0.7506951653431879,
+        "participant_macro_roc_auc_n": 29,
+        "pooled_brier": 0.04628334535177975
+      },
+      "participant_cluster_bootstrap_95_ci": {
+        "pooled_pr_auc": {
+          "lower_95": 0.21615771166269077,
+          "upper_95": 0.529093252501468,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        },
+        "pooled_roc_auc": {
+          "lower_95": 0.8247260341025079,
+          "upper_95": 0.931214806880303,
+          "valid_resamples": 2000,
+          "requested_resamples": 2000
+        }
+      }
+    }
+  }
+}
