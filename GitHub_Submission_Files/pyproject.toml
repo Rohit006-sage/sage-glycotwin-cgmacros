@@ -1,9 +1,0 @@
-[project]
-name = "glycotwin-cgmacros-prototype"
-version = "0.1.0"
-requires-python = ">=3.11,<3.12"
-description = "Retrospective CGMacros glucose-forecasting research prototype"
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-ra"
